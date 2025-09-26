@@ -110,6 +110,9 @@
      --ulul-marker-color: #ea580c;
      --ululul-marker-color: #16a34a;
 
+     --ol-marker-color: #1d4ed8;
+     --olol-marker-color: #c2410c;
+     --ololol-marker-color: #15803d;
      --ol-hover-marker-color:rgb(0, 0, calc(100 * var(--list-marker-effect) * var(--use-dynamic-effect)));
 
      --blockquote-border-color: #2f5e84;
@@ -607,14 +610,31 @@ ol .md-list-item::marker {
     font-family: "Times New Roman", Times, serif;
     font-size: 16px;
     font-style: italic;
+    color: var(--ol-marker-color);
     transition: font-weight 0.2s ease, font-style 0.2s ease, color 0.2s ease, font-size 0.2s ease;
+}
+
+ol ol .md-list-item::marker {
+    color: var(--olol-marker-color);
+}
+
+ol ol ol .md-list-item::marker {
+    color: var(--ololol-marker-color);
 }
 
 ol .md-list-item:hover::marker {
     font-style: var(--list-ol-text-style);
     font-weight: calc(500 + 100 * var(--list-marker-effect) * var(--use-dynamic-effect));
     font-size: calc(16px + 3px * var(--list-marker-effect) * var(--use-dynamic-effect));
-    color: var(--ol-hover-marker-color);
+    color: var(--ol-marker-color);
+}
+
+ol ol .md-list-item:hover::marker {
+    color: var(--olol-marker-color);
+}
+
+ol ol ol .md-list-item:hover::marker {
+    color: var(--ololol-marker-color);
 }
 
 /* blockquote */
