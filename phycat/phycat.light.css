@@ -2107,3 +2107,5 @@ div.outline-item-active {
         visibility: hidden
     }
 }
+/* 额外覆盖：禁用斜体文本下方的波浪下划线波浪效果 */
+#write em::after, #write em:hover::after { display: none !important; }
